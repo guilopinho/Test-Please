@@ -3,12 +3,12 @@ global.grid_depth = ds_grid_create(2,0);
 
 depth_system = function(){
 	var _grid_depth = global.grid_depth;
-	var _papers = instance_number(obj_paper);
+	var _papers = instance_number(obj_paper_parent);
 
 	ds_grid_resize(_grid_depth,2,_papers);
 
 	var _i = 0;
-	with(obj_paper){
+	with(obj_paper_parent){
 		_grid_depth[# 0, _i] = id;
 		_grid_depth[# 1, _i] = y;
 		_i++;

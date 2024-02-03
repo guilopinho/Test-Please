@@ -1,1 +1,0 @@
-flash_alpha = approach(flash_alpha,0,.1);
