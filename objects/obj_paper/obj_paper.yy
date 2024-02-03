@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_paper_parent",
+  "name": "obj_paper",
   "spriteId": {
     "name": "spr_paper",
     "path": "sprites/spr_paper/spr_paper.yy",

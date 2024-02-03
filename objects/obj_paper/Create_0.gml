@@ -1,8 +1,6 @@
-image_index = 0;
-
 surf = noone;
-surf_width = sprite_get_width(sprite_index);
-surf_height = sprite_get_height(sprite_index);
+surf_width = 94;
+surf_height = 136;
 surf_x = x;
 surf_y = y;
 
@@ -17,8 +15,6 @@ is_visible = true;
 
 mouse_xprevious = mouse_x;
 mouse_yprevious = mouse_y;
-
-selected = true;
 
 draw_paper = function(){
 	
