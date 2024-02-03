@@ -1,4 +1,4 @@
-//image_index = irandom(1);
+image_index = irandom(1);
 
 surf = noone;
 surf_x = x;
@@ -114,9 +114,11 @@ draw_surf = function(){
 		
 		var _y2 = _y1 + (_offset * _i);
 		
+		/*
 		if(answer_index == _i){
 			draw_sprite(spr_mask,0,_x1,_y2);
 		}
+		*/
 		
 		if(point_in_rectangle(_m_x,_m_y,_x1 - _spr_w / 2,_y2 - _spr_h / 2,_x1 + _spr_w / 2,_y2 + _spr_h / 2)){
 			if(_mouse_press_left){
