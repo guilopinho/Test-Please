@@ -1,8 +1,8 @@
 #macro VIEW 0
 #macro VIEW_CAM view_camera[VIEW]
-#macro VIEW_WIDTH 320
-#macro VIEW_HEIGHT 180
-#macro VIEW_SCALE 4
+#macro VIEW_WIDTH 480
+#macro VIEW_HEIGHT 270
+#macro VIEW_SCALE 3
 
 #macro GUI_WIDTH VIEW_WIDTH
 #macro GUI_HEIGHT VIEW_HEIGHT

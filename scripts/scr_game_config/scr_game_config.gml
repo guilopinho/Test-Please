@@ -1,7 +1,7 @@
 function game_set_resolution(){
 	
 	if(!instance_exists(obj_view_controller)) return;
-	window_set_cursor(cr_none);
+	//window_set_cursor(cr_none);
 	window_set_caption(WINDOW_TITLE);
 	window_set_size(WINDOW_WIDTH,WINDOW_HEIGHT);
 	surface_resize(application_surface,VIEW_WIDTH,VIEW_HEIGHT);
