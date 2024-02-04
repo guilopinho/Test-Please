@@ -3,6 +3,9 @@ image_index = choose(0,1);
 hspd = 0;
 vspd = 0;
 
+cur_time = 0;
+timer = 90;
+
 surf = noone;
 surf_x = x;
 surf_y = y;
@@ -39,7 +42,7 @@ update_pos = function(){
 	var _mouse_down_right = mouse_check_button(mb_right);
 	var _mouse_released_right = mouse_check_button_released(mb_right);
 
-	if(_mouse_enter and _mouse_down_right and global.selected_paper == -1){
+	if(_mouse_enter and _mouse_down_right and global.selected_paper == -1 and !destroy){
 		global.selected_paper = self;
 		flash_alpha = 1;
 		x_scale = 0.8;
@@ -120,6 +123,11 @@ draw_surf = function(){
 		var _y2 = _y1 + (_offset * _i);
 		if(point_in_rectangle(_m_x,_m_y,_x1 - _spr_w / 2,_y2 - _spr_h / 2,_x1 + _spr_w / 2,_y2 + _spr_h / 2)){
 			if(_mouse_press_left){
+				cur_time++;
+				if(cur_time >= timer and !destroy){
+					flash_alpha = 1;
+					destroy = true;
+				}
 				questions[_i] = true;
 			}
 		}
