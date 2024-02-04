@@ -99,7 +99,7 @@ draw_surf = function(){
 
 	surface_set_target(surf);
 	
-	if(_mouse_enter and _mouse_press_left){
+	if(_mouse_enter and _mouse_press_left and !destroy){
 		draw_set_color(_line_color);
 		draw_line_width(_x1,_y1,_x2,_y2,_line_size);
 		draw_set_color(-1);
@@ -127,6 +127,11 @@ draw_surf = function(){
 				if(cur_time >= timer and !destroy){
 					flash_alpha = 1;
 					destroy = true;
+					if(check_answer()){
+						flash_color = make_color_rgb(99,171,63);
+					}else{
+						flash_color = make_color_rgb(230, 69, 57);
+					}
 				}
 				questions[_i] = true;
 			}
@@ -135,7 +140,7 @@ draw_surf = function(){
 	
 }
 
-check_question = function(){
+check_answer = function(){
 	
 	if(array_equals(questions,answers)){
 		return true;
