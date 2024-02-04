@@ -16,7 +16,7 @@
     {"id":{"name":"scr_game_config","path":"scripts/scr_game_config/scr_game_config.yy",},"order":1,},
     {"id":{"name":"spr_ground","path":"sprites/spr_ground/spr_ground.yy",},"order":7,},
     {"id":{"name":"spr_blackboard","path":"sprites/spr_blackboard/spr_blackboard.yy",},"order":8,},
-    {"id":{"name":"obj_paper_parent","path":"objects/obj_paper_parent/obj_paper_parent.yy",},"order":1,},
+    {"id":{"name":"obj_paper","path":"objects/obj_paper/obj_paper.yy",},"order":1,},
     {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},"order":0,},
   ],
   "Options": [

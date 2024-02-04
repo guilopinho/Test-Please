@@ -1,4 +1,7 @@
-image_index = irandom(1);
+image_index = choose(0,1);
+
+hspd = 0;
+vspd = 0;
 
 surf = noone;
 surf_x = x;
@@ -39,6 +42,8 @@ update_pos = function(){
 	if(_mouse_enter and _mouse_down_right and global.selected_paper == -1){
 		global.selected_paper = self;
 		flash_alpha = 1;
+		x_scale = 0.8;
+		y_scale = 0.8;
 	}else if(_mouse_released_right){
 		global.selected_paper = -1;
 	}
@@ -96,6 +101,7 @@ draw_surf = function(){
 		draw_line_width(_x1,_y1,_x2,_y2,_line_size);
 		draw_set_color(-1);
 	}
+	
 	surface_reset_target();
 	draw_surface_ext(surf,surf_x,surf_y,x_scale,y_scale,angle,color,alpha);
 	
@@ -111,23 +117,12 @@ draw_surf = function(){
 	var _spr_h = sprite_get_height(spr_mask);
 	
 	for(var _i = 0; _i < questions_length; _i++){
-		
 		var _y2 = _y1 + (_offset * _i);
-		
-		/*
-		if(answer_index == _i){
-			draw_sprite(spr_mask,0,_x1,_y2);
-		}
-		*/
-		
 		if(point_in_rectangle(_m_x,_m_y,_x1 - _spr_w / 2,_y2 - _spr_h / 2,_x1 + _spr_w / 2,_y2 + _spr_h / 2)){
 			if(_mouse_press_left){
 				questions[_i] = true;
 			}
 		}
-		
-		show_debug_message(questions[_i])
-		
 	}
 	
 }
