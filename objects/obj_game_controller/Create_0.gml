@@ -1,17 +1,17 @@
 randomize();
 global.selected_paper = -1;
 global.grid_depth = ds_grid_create(2,0);
-global.timer = 130;
+global.timer = 200;
 alarm[0] = global.timer;
 
 depth_system = function(){
 	var _grid_depth = global.grid_depth;
-	var _papers = instance_number(obj_paper);
+	var _papers = instance_number(obj_item_parent);
 
 	ds_grid_resize(_grid_depth,2,_papers);
 
 	var _i = 0;
-	with(obj_paper){
+	with(obj_item_parent){
 		_grid_depth[# 0, _i] = id;
 		_grid_depth[# 1, _i] = y;
 		_i++;
@@ -36,7 +36,7 @@ create_paper = function(){
 	var _length = 8;
 	var _dir = 180;
 	
-	var _new_papaer = instance_create_layer(_x,_y,"Papers",obj_paper);
+	var _new_papaer = instance_create_layer(_x,_y,"Items",obj_paper);
 	_new_papaer.hspd = lengthdir_x(_length,_dir);
 	_new_papaer.vspd = lengthdir_y(_length,_dir);
 	
