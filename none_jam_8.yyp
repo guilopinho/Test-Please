@@ -10,6 +10,7 @@
     {"id":{"name":"spr_clipboard","path":"sprites/spr_clipboard/spr_clipboard.yy",},"order":0,},
     {"id":{"name":"spr_window","path":"sprites/spr_window/spr_window.yy",},"order":6,},
     {"id":{"name":"spr_table","path":"sprites/spr_table/spr_table.yy",},"order":2,},
+    {"id":{"name":"spr_cursor","path":"sprites/spr_cursor/spr_cursor.yy",},"order":9,},
     {"id":{"name":"fnt_paper","path":"fonts/fnt_paper/fnt_paper.yy",},"order":0,},
     {"id":{"name":"spr_paper","path":"sprites/spr_paper/spr_paper.yy",},"order":4,},
     {"id":{"name":"scr_approach","path":"scripts/scr_approach/scr_approach.yy",},"order":2,},
