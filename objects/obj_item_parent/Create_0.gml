@@ -10,6 +10,8 @@ flash_alpha = 0;
 
 destroy = false;
 
+collision = true;
+
 draw_item = function(){
 	
 	if(sprite_index != -1 and is_visible){

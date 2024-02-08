@@ -5,7 +5,7 @@ hspd = 0;
 vspd = 0;
 
 cur_time = 0;
-timer = 90;
+timer = 70;
 
 surf = noone;
 surf_x = x;
@@ -24,6 +24,10 @@ questions_length = array_length(questions);
 answer_index = irandom_range(0,questions_length - 1);
 answers = [false,false,false,false];
 answers[answer_index] = true;
+
+collision = false;
+
+alarm[0] = 60 * 4.3;
 
 draw_surf = function(){
 	
